@@ -26,8 +26,16 @@ ul li {
   margin: 0 auto;
 }
 
+.container-head{
+  position: relative;
+}
+
 body {
   font-family: 'ubuntu', Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 18px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

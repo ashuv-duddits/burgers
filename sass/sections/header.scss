@@ -1,0 +1,142 @@
+.head{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.header{
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 13px;
+}
+.logo{
+  flex: 1;
+  display: block;
+}
+.logo__img{
+  display: block;
+}
+.nav{
+  margin-right: 15px;
+}
+.nav__list{
+  display: flex;
+}
+.nav__item{
+  margin-right: 16px;
+}
+.nav__item_last{
+  margin-right: 0;
+}
+.nav__item_last .nav__link{
+  margin-right: 0;
+}
+.nav__link{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+.nav__item:after{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.nav__item_last:after{
+  display: none;
+}
+.button{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 16px;
+  background-color: $btn-clr;
+  border-radius: 5px;
+  transition: 0.2s;
+  color: #fff;
+}
+.button:hover{
+  background-color: $btn-clr-hover;
+}
+.head__tagline{
+  padding: 0 19px 149px 19px;
+  display: flex;
+  align-items: flex-end;
+}
+.head__img{
+  margin-right: 11px;
+}
+.head__img-pic{
+  display: block;
+}
+.head__title{
+  padding-bottom: 59px;
+  font-weight: normal;
+  font-style: normal;
+}
+.head__title-main{
+  font-family: 'gagalin';
+  font-size: 72px;
+  text-transform: uppercase;
+  color: $fonts-clr_yellow;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+.head__title-desc{
+  font-family: 'lifehack';
+  font-size: 65px;
+  text-transform: lowercase;
+  color: #fff;
+  letter-spacing: -1.5px;
+  line-height: 0.92;
+}
+.nav-head{
+  position: fixed;
+  top: 80px;
+  right: 50px;
+}
+.nav-head__list{
+  display: flex;
+  flex-direction: column;
+}
+.nav-head__item{
+  margin-bottom: 5px;
+}
+.nav-head__link{
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  position: relative;
+}
+.nav-head__item:hover .nav-head__link{
+  border-color: #fff;
+}
+.nav-head__link:after{
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.head__down{
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  display: block;
+}
+.head__down-img{
+  display: block;
+}
