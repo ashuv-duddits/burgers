@@ -2,7 +2,8 @@ var gulp         	= require('gulp'),
 		sass         	= require('gulp-sass'),
 		autoprefixer 	= require('gulp-autoprefixer'),
 		cleanCSS     	= require('gulp-clean-css'),
-		rename  			= require('gulp-rename'),
+		notify     		= require('gulp-notify'),
+		rename  		= require('gulp-rename'),
 		browserSync  	= require('browser-sync').create(),
 		concat      	= require('gulp-concat'),
 		uglify       	= require('gulp-uglify');
@@ -18,7 +19,7 @@ gulp.task('browser-sync', ['sass', 'scripts'], function() {
 
 gulp.task('sass', function () {
   return gulp.src('./sass/main.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', notify.onError()))
     .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
     .pipe(cleanCSS())
