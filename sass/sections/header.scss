@@ -1,7 +1,14 @@
 .head{
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+}
+.head:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.31);
 }
 .header{
   display: flex;
@@ -65,9 +72,10 @@
   background-color: $btn-clr-hover;
 }
 .head__tagline{
-  padding: 0 19px 149px 19px;
+  margin: auto;
   display: flex;
   align-items: flex-end;
+  padding-bottom: 150px;
 }
 .head__img{
   margin-right: 11px;
@@ -80,7 +88,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.head__title-main{
+.section-title{
   font-family: 'gagalin';
   font-size: 72px;
   text-transform: uppercase;

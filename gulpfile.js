@@ -21,7 +21,7 @@ gulp.task('browser-sync', ['sass', 'scripts'], function() {
 
 gulp.task('sass', function () {
   return gulp.src('./sass/main.scss')
-	.pipe(wait(500))
+	.pipe(wait(1000))
 	.pipe(sourcemaps.init({loadMaps: true}))
     	.pipe(sass().on('error', notify.onError()))
     	.pipe(rename({suffix: '.min'}))

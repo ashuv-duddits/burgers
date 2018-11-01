@@ -21,13 +21,27 @@ ul li {
   list-style: none;
 }
 
+p {
+  margin: 0;
+}
+
 .container{
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .container-head{
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.section{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 body {
