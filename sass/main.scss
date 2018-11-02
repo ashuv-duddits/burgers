@@ -1,8 +1,9 @@
 /* Setups */
-@import "variables";
+@import "layout/variables";
 @import "fonts";
-@import "setup";
+@import "layout/setup";
 
 /* Sections */
 @import "sections/header";
 @import "sections/best";
+@import "sections/reviews";
