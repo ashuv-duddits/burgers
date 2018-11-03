@@ -4,4 +4,4 @@
 
 **Наставник**: Максим Иванов
 
-**Ссылка на проект**: https://ashuv-duddits.github.io/burgers/
+**Ссылка на проект**: https://ashuv-duddits.github.io/burgers/app
