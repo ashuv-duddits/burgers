@@ -3,7 +3,9 @@
 @import "fonts";
 @import "layout/setup";
 
+/* Blocks */
+@import "blocks/points.scss";
 /* Sections */
-@import "sections/header";
+@import "sections/head";
 @import "sections/best";
 @import "sections/reviews";

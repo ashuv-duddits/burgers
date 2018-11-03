@@ -14,13 +14,15 @@
   filter: grayscale(100%);
   &:hover{
     .reviews__wrap{
-      display: flex;
+      opacity: 1;
     }
   }
 }
 .reviews__wrap{
-  display: none;
+  display: flex;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: .2s;
 }
 .reviews__title{
   font-family: 'gagalin';
@@ -32,10 +34,18 @@
   margin-bottom: 30px;
 }
 .reviews__desc{
-  font-family: 'ubuntu';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 16px;
+  & p{
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+}
+.button_color-black{
+  background-color: $fonts-clr;
+  &:hover{
+    background-color: $fonts-clr-black;
+  }
 }
