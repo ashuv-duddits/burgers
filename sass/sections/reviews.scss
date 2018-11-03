@@ -19,8 +19,10 @@
   }
 }
 .reviews__wrap{
+  max-height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   opacity: 0;
   transition: .2s;
 }
@@ -33,14 +35,16 @@
   color: #fff;
   margin-bottom: 30px;
 }
+
 .reviews__desc{
+  overflow: hidden;
+  margin-bottom: 16px;
   & p{
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
     font-size: 14px;
     color: #fff;
-    margin-bottom: 16px;
   }
 }
 .button_color-black{
@@ -49,3 +53,4 @@
     background-color: $fonts-clr-black;
   }
 }
+
