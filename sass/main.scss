@@ -1,10 +1,11 @@
 /* Setups */
+@import "layout/normalize";
 @import "layout/variables";
 @import "fonts";
 @import "layout/setup";
 
 /* Blocks */
-@import "blocks/points.scss";
+@import "blocks/points";
 /* Sections */
 @import "sections/head";
 @import "sections/best";
