@@ -46,6 +46,18 @@ p {
   background: center center / cover no-repeat;
 }
 
+.section-title{
+  font-family: 'gagalin';
+  font-size: 72px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $fonts-clr_yellow;
+  line-height: 1;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 .wrapper {
   position: relative;
   width: 100%;

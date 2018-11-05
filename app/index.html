@@ -205,12 +205,12 @@
           </li>
         </ul>
       </section>
-      <section class="section order">
-        <div class="container">
-          <h2 class="section-title">Закажите доставку</h2>
+      <section class="section order" style="background-image:url('img/backgrounds/bg_order.jpg')">
+        <div class="container container-order">
+          <h2 class="section-title section-title_order">Закажите доставку</h2>
           <div class="form-wrap">
             <form action="" class="form">
-              <div class="form__left">
+              <div class="form__column">
                 <div class="form__row">
                   <label class="form__label">
                     <div class="form__title-elem">Имя</div>
@@ -246,32 +246,35 @@
                     </label>
                 </div>
               </div>
-              <div class="form__right">
+              <div class="form__column">
                 <div class="form__row">
                   <label class="form__label">
                     <div class="form__title-elem">Комментарий</div>
-                    <textarea name="" id="" placeholder="" cols="30" rows="10"></textarea>
+                    <textarea name="" id="" placeholder="" cols="30" rows="10" class="form__textarea"></textarea>
                   </label>
                 </div>
                 <div class="form__row">
-                  <label class="form__label">
-                    <input type="radio" name="money" id="">
+                  <label class="form__label form__label_row">
+                    <input type="radio" name="money" id="" class="form__radio">
+                    <div class="form__radio-fake"></div>
                     <div class="form__title-elem">Потребуется сдача</div>
                   </label>
-                  <label class="form__label">
-                    <input type="radio" name="money" id="">
+                  <label class="form__label form__label_row">
+                    <input type="radio" name="money" id="" class="form__radio">
+                    <div class="form__radio-fake"></div>
                     <div class="form__title-elem">Оплата по карте</div>
                   </label>
                 </div>
                 <div class="form__row">
-                  <label class="form__label">
-                    <input type="checkbox" name="" id="">
+                  <label class="form__label form__label_row">
+                    <input type="checkbox" name="" id="" class="form__checkbox">
+                    <div class="form__checkbox-fake"></div>
                     <div class="form__title-elem">Не перезванивать</div>
                   </label>
                 </div>
                 <div class="form__row">
                   <a href="#" class="button">Заказать</a>
-                  <a href="#" class="button">Очистить</a>
+                  <a href="#" class="button button_clear">Очистить</a>
                 </div>
               </div>
             </form>
