@@ -1,3 +1,7 @@
+.container-head{
+  align-items: center;
+}
+
 .head{
   position: relative;
   &:before{
@@ -18,12 +22,16 @@
   font-size: 13px;
   font-weight: 500;
   padding-top: 13px;
+  width: 100%;
 }
 .logo{
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo__img{
-  display: block;
+.logo-icon{
+  width: 98px;
+  height: 74px;
 }
 .head__buttons{
   display: flex;
@@ -76,13 +84,15 @@
   margin: auto;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 150px;
+  padding-bottom: 8%;
 }
 .head__img{
   margin-right: 11px;
 }
 .head__img-pic{
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 .head__title{
   padding-bottom: 59px;
@@ -104,12 +114,14 @@
 }
 
 .head__down{
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
-  display: block;
+  width: 40px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
-.head__down-img{
-  display: block;
+.arrow-scroll-icon{
+  width: 29px;
+  height: 15px;
 }
