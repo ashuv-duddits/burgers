@@ -1,0 +1,56 @@
+.container-best{
+  justify-content: center;
+  align-items: center;
+}
+.section-title_best{
+  margin-bottom: 55px;
+  color: $fonts-clr;
+}
+.best{
+  color: $fonts-clr;
+}
+.best__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.best__item{
+  flex-basis: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.best__icon{
+  width: 97px;
+  height: 89px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 33px;
+}
+.best__img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.best__title{
+  font-family: 'lifehack';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.6px;
+  margin-bottom: 20px;
+}
+.best__desc{
+  & p{
+    text-align: justify;
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.71;
+  }
+}
