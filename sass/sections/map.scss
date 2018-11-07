@@ -1,0 +1,74 @@
+.container-footer{
+  flex-direction: initial;
+  height: initial;
+  position: initial;
+}
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0 12px;
+}
+.footer__column{
+  width: 50%;
+}
+.footer__column_right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.contacts{
+  font-size: 14px;
+  color: #fff;
+}
+.tel{
+  text-decoration: none;
+  color: $btn-clr;
+  font-weight: 700;
+  font-size: 14px;
+}
+.socials{
+  display: flex;
+}
+.socials__item{
+  margin-right: 18px;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.socials__link{
+  width: 23px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    opacity: 0.3;
+    transition: 0.2s;
+  }
+  &:hover{
+    svg{
+      opacity: 1;
+    }
+  }
+}
+.vk-icon{
+  width: 23px;
+  height: 13px;
+}
+.fb-icon{
+  width: 20px;
+  height: 20px;
+
+}
+.inst-icon{
+  width: 20px;
+  height: 20px;
+
+}
+.tw-icon{
+  width: 20px;
+  height: 16px;
+ 
+}
