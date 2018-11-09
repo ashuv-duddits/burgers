@@ -2,6 +2,9 @@
   position: fixed;
   top: 80px;
   right: 50px;
+  @include laptop {
+    right: -9999px;
+  }
   z-index: 2;
 }
 

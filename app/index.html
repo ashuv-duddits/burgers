@@ -24,6 +24,13 @@
             </div>
             <div class="head__buttons">
               <nav class="nav">
+                <a href="#" class="nav__toggle">
+                  <ul class="nav__toggle-list">
+                    <li class="nav__toggle-item"></li>
+                    <li class="nav__toggle-item"></li>
+                    <li class="nav__toggle-item"></li>
+                  </ul>
+                </a>
                 <ul class="nav__list">
                   <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
                   <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
@@ -112,9 +119,21 @@
           <div class="team__content">
             <h2 class="section-title section-title_team">Команда</h2>
             <ul class="accordeon">
+              <li class="accordeon__item">
+                <a href="#" class="accordeon__link">
+                  <span class="reviews-team-title reviews-team-title_margin">Дэниэл Редклиф</span>
+                </a>
+                <div class="accordeon__elem">
+                  <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
+                  <div class="accordeon__info">
+                    <div class="accordeon__title">Оператор</div>
+                    <div class="accordeon__desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                  </div>
+                </div>
+              </li>
               <li class="accordeon__item accordeon__item_active">
                 <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title">Дэниэл Редклиф</span>
+                  <span class="reviews-team-title reviews-team-title_margin">Ричард Джеймс</span>
                 </a>
                 <div class="accordeon__elem">
                   <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
@@ -126,19 +145,7 @@
               </li>
               <li class="accordeon__item">
                 <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title">Ричард Джеймс</span>
-                </a>
-                <div class="accordeon__elem">
-                  <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
-                  <div class="accordeon__info">
-                    <div class="accordeon__title">Оператор</div>
-                    <div class="accordeon__desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordeon__item">
-                <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title">Джейк Финн</span>
+                  <span class="reviews-team-title reviews-team-title_margin">Джейк Финн</span>
                 </a>
                 <div class="accordeon__elem">
                   <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
@@ -383,7 +390,11 @@
             <div class="footer__column">
               <div class="contacts">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
               <a href="tel:+78123771377" class="tel">
-                <span class="tel__icon"></span>
+                <span class="tel__icon">
+                  <svg class="tel-icon">
+                    <use xlink:href="./img/sprite.svg#tel"></use>
+                  </svg>
+                </span>
                 <span class="tel__text">+7 (812) 377-13-77</span>
               </a>
             </div>

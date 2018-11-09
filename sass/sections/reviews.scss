@@ -19,7 +19,7 @@
   }
 }
 .reviews__wrap{
-  padding: 50px 19px;
+  padding: rem(50px) rem(19px);
   max-height: 100%;
   display: flex;
   flex-direction: column;
@@ -34,10 +34,10 @@
   font-family: 'gagalin';
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: rem(14px);
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
 }
 
 .reviews__desc{
@@ -47,7 +47,7 @@
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     color: #fff;
   }
 }

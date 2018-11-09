@@ -1,0 +1,25 @@
+//px to rem
+@function rem($size) {
+  @return $size / $root-font-size * 1rem;
+}
+//adaptive
+@mixin desktop {
+  @media (max-width: $desktop){
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: $laptop){
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: $phone){
+    @content;
+  }
+}

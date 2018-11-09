@@ -25,7 +25,7 @@ gulp.task('sass', function () {
 	.pipe(sourcemaps.init({loadMaps: true}))
     	.pipe(sass().on('error', notify.onError()))
     	.pipe(rename({suffix: '.min'}))
-    	.pipe(autoprefixer({browsers: ['last 4 versions'], cascade: false}))
+		.pipe(autoprefixer({browsers: ['last 4 versions'], cascade: false}))
 		.pipe(cleanCSS())
 	.pipe(sourcemaps.write())
     .pipe(gulp.dest('./app/css'))

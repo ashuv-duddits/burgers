@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 10px 0 12px;
+  padding: rem(10px) 0;
 }
 .footer__column{
   width: 50%;
@@ -19,27 +19,53 @@
   justify-content: flex-end;
 }
 .contacts{
-  font-size: 14px;
+  font-size: rem(14px);
   color: #fff;
 }
+
 .tel{
+  position: relative;
   text-decoration: none;
   color: $btn-clr;
-  font-weight: 700;
-  font-size: 14px;
+  display: block;
+  height: rem(25px);
+
 }
+.tel__icon{
+  position: absolute;
+  width: rem(16px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tel-icon{
+  width: rem(12px);
+  height: rem(11px);
+}
+.tel__text{
+  height: 100%;
+  display: block;
+  line-height: rem(25px);
+  font-weight: 700;
+  font-size: rem(14px);
+  padding-left: rem(20px);
+}
+
 .socials{
   display: flex;
 }
 .socials__item{
-  margin-right: 18px;
+  margin-right: rem(18px);
   &:last-child{
     margin-right: 0;
   }
 }
 .socials__link{
-  width: 23px;
-  height: 20px;
+  width: rem(23px);
+  height: rem(20px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,21 +80,21 @@
   }
 }
 .vk-icon{
-  width: 23px;
-  height: 13px;
+  width: rem(23px);
+  height: rem(13px);
 }
 .fb-icon{
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 
 }
 .inst-icon{
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 
 }
 .tw-icon{
-  width: 20px;
-  height: 16px;
+  width: rem(20px);
+  height: rem(16px);
  
 }

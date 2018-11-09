@@ -8,6 +8,22 @@ html {
   height: 100%;
 }
 
+html{
+  font-size: 18px;
+  @include desktop {
+    font-size: 16px;
+  }
+  @include laptop {
+    font-size: 15px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include phone {
+    font-size: 13px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -33,6 +49,15 @@ p {
 
 .container {
   max-width: 940px;
+  @include desktop {
+    max-width: 900px;
+  }
+  @include laptop {
+    max-width: 712px;
+  }
+  @include tablet {
+    max-width: 440px;
+  }
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -49,20 +74,19 @@ p {
 
 .section-title{
   font-family: 'gagalin';
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
   color: $fonts-clr_yellow;
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
   text-align: center;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
@@ -71,7 +95,7 @@ body {
   font-family: 'ubuntu', Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

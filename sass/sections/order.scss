@@ -2,28 +2,28 @@
   justify-content: center;
 }
 .section-title_order{
-  margin-bottom: 42px;
+  margin-bottom: rem(42px);
 }
 .form{
   display: flex;
 }
 .form__column{
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
   &:last-child{
     margin-right: 0;
 }
 }
 .form__row{
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: rem(18px);
   &:last-child{
     margin-bottom: 0;
   }
 }
 .form__label{
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
   &:last-child{
     margin-right: 0;
   }
@@ -31,33 +31,35 @@
 .form__input, .form__textarea{
   width: 100%;
   outline: none;
-  padding: 5px;
-  border-radius: 5px;
+  padding: rem(7px);
+  border-radius: rem(5px);
   border: none;
 }
 .form__textarea{
   resize: none;
-  height: 105px;
+  height: rem(105px);
 }
 .form__title-elem{
   color: #fff;
-  font-size: 14px;
-  margin-bottom: 6px;
+  font-size: rem(14px);
+  margin-bottom: rem(5px);
 }
 .form__label_row{
   display: flex;
   align-items: center;
 }
 .form__label_row{
+  flex: 0;
   cursor: pointer;
   .form__title-elem{
     margin-bottom: 0;
+    white-space: nowrap;
   }
 }
 .form__radio-fake, .form__checkbox-fake{
-  margin-right: 10px;
-  width: 16px;
-  height: 16px;
+  margin-right: rem(10px);
+  width: rem(16px);
+  height: rem(16px);
   background-color: #fff;
   position: relative;
   &:after{
@@ -74,16 +76,16 @@
 .form__radio-fake{
   border-radius: 50%;
   &:after{
-    width: 8px;
-    height: 8px;
+    width: rem(8px);
+    height: rem(8px);
     border-radius: 50%;
     background-color: $btn-clr;
   }
 }
 .form__checkbox-fake{
   &:after{
-    width: 11px;
-    height: 9px;
+    width: rem(11px);
+    height: rem(9px);
     background-image: url('../img/icons/check.png');
   }
 }
@@ -108,5 +110,5 @@
 .button_clear{
   background-color: transparent;
   text-transform: initial;
-  margin-left: 5px;
+  margin-left: rem(5px);
 }
