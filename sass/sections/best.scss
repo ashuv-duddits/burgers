@@ -15,15 +15,28 @@
   justify-content: space-between;
 }
 .best__item{
-  flex-basis: calc(100% / 3 - rem(20px));
+  width: calc(100% / 3 - 1.11rem);
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include phone {
+    flex-direction: initial;
+    width: 100%;
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
 }
 .best__icon{
   width: rem(97px);
   height: rem(89px);
   margin-bottom: rem(33px);
+  @include phone {
+    margin-bottom: initial;
+    width: rem(125px);
+    flex-shrink: 0;
+  }
 }
 
 .meat-icon{
@@ -47,6 +60,10 @@
   text-align: center;
   letter-spacing: rem(-1px);
   margin-bottom: rem(20px);
+  @include phone{
+    margin-bottom: rem(15px);
+    text-align: left;
+  }
 }
 .best__desc{
   & p{

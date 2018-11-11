@@ -24,13 +24,6 @@
             </div>
             <div class="head__buttons">
               <nav class="nav">
-                <a href="#" class="nav__toggle">
-                  <ul class="nav__toggle-list">
-                    <li class="nav__toggle-item"></li>
-                    <li class="nav__toggle-item"></li>
-                    <li class="nav__toggle-item"></li>
-                  </ul>
-                </a>
                 <ul class="nav__list">
                   <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
                   <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
@@ -41,7 +34,16 @@
                   <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                 </ul>
               </nav>
-              <a href="#" class="button">Заказать</a>
+              <div class="head__btns">
+                <a href="#" class="button">Заказать</a>
+                <a href="#" class="hamburger-menu-link">
+                  <ul class="hamburger-menu-link__list">
+                    <li class="hamburger-menu-link__item"></li>
+                    <li class="hamburger-menu-link__item"></li>
+                    <li class="hamburger-menu-link__item"></li>
+                  </ul>
+                </a>
+              </div>
             </div>
           </header>
           <div class="head__tagline">
@@ -121,7 +123,7 @@
             <ul class="accordeon">
               <li class="accordeon__item">
                 <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title reviews-team-title_margin">Дэниэл Редклиф</span>
+                  <span class="reviews-team-title reviews-team-title_margin_fs">Дэниэл Редклиф</span>
                 </a>
                 <div class="accordeon__elem">
                   <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
@@ -133,7 +135,7 @@
               </li>
               <li class="accordeon__item accordeon__item_active">
                 <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title reviews-team-title_margin">Ричард Джеймс</span>
+                  <span class="reviews-team-title reviews-team-title_margin_fs">Ричард Джеймс</span>
                 </a>
                 <div class="accordeon__elem">
                   <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
@@ -145,7 +147,7 @@
               </li>
               <li class="accordeon__item">
                 <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title reviews-team-title_margin">Джейк Финн</span>
+                  <span class="reviews-team-title reviews-team-title_margin_fs">Джейк Финн</span>
                 </a>
                 <div class="accordeon__elem">
                   <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
@@ -157,7 +159,7 @@
               </li>
               <li class="accordeon__item">
                 <a href="#" class="accordeon__link">
-                  <span class="reviews-team-title">Николай Иванов</span>
+                  <span class="reviews-team-title reviews-team-title_margin_fs">Николай Иванов</span>
                 </a>
                 <div class="accordeon__elem">
                   <div class="accordeon__pic" style="background-image: url('./img/team/richard.jpg')"></div>
@@ -179,7 +181,9 @@
               <span class="accordeon-menu__text">Для мясоедов</span>
             </a>
             <div class="accordeon-menu__desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam? Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit rem debitis.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
+              Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
+              rem debitis.
             </div>
           </li>
           <li class="accordeon-menu__item">
@@ -187,7 +191,9 @@
               <span class="accordeon-menu__text">Вегетарианское</span>
             </a>
             <div class="accordeon-menu__desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam? Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit rem debitis.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
+              Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
+              rem debitis.
             </div>
           </li>
           <li class="accordeon-menu__item">
@@ -195,7 +201,9 @@
               <span class="accordeon-menu__text">Диетическое</span>
             </a>
             <div class="accordeon-menu__desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam? Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit rem debitis.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
+              Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
+              rem debitis.
             </div>
           </li>
         </ul>
@@ -339,11 +347,11 @@
                     <div class="form__title-elem">Корпус</div>
                     <input type="text" placeholder="" class="form__input">
                   </label>
-                  <label class="form__label">
+                  <label class="form__label form__label_phone_margin">
                     <div class="form__title-elem">Квартира</div>
                     <input type="text" placeholder="" class="form__input">
                   </label>
-                  <label class="form__label">
+                  <label class="form__label form__label_phone">
                     <div class="form__title-elem">Этаж</div>
                     <input type="text" placeholder="" class="form__input">
                   </label>
@@ -353,10 +361,10 @@
                 <div class="form__row">
                   <label class="form__label">
                     <div class="form__title-elem">Комментарий</div>
-                    <textarea name="" id="" placeholder="" cols="30" rows="10" class="form__textarea"></textarea>
+                    <textarea name="" id="" placeholder="" class="form__textarea"></textarea>
                   </label>
                 </div>
-                <div class="form__row">
+                <div class="form__row form__row_phone_center">
                   <label class="form__label form__label_row">
                     <input type="radio" name="money" id="" class="form__radio">
                     <div class="form__radio-fake"></div>
@@ -368,14 +376,14 @@
                     <div class="form__title-elem">Оплата по карте</div>
                   </label>
                 </div>
-                <div class="form__row">
+                <div class="form__row form__row_phone_center">
                   <label class="form__label form__label_row">
                     <input type="checkbox" name="" id="" class="form__checkbox">
                     <div class="form__checkbox-fake"></div>
                     <div class="form__title-elem">Не перезванивать</div>
                   </label>
                 </div>
-                <div class="form__row">
+                <div class="form__row form__row_phone_center">
                   <a href="#" class="button">Заказать</a>
                   <a href="#" class="button button_clear">Очистить</a>
                 </div>
@@ -387,7 +395,7 @@
       <section class="section map" style="background-image:url('img/backgrounds/map.jpg')">
         <footer class="footer" style="background-image:url('img/backgrounds/bg_foot.jpg')">
           <div class="container container-footer">
-            <div class="footer__column">
+            <div class="footer__column footer__column_left">
               <div class="contacts">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
               <a href="tel:+78123771377" class="tel">
                 <span class="tel__icon">
@@ -403,28 +411,28 @@
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="vk-icon">
-                      <use xlink:href="./img/sprite.svg#vk"/>
+                      <use xlink:href="./img/sprite.svg#vk" />
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="fb-icon">
-                      <use xlink:href="./img/sprite.svg#fb"/>
+                      <use xlink:href="./img/sprite.svg#fb" />
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="inst-icon">
-                      <use xlink:href="./img/sprite.svg#inst"/>
+                      <use xlink:href="./img/sprite.svg#inst" />
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="#" class="socials__link">
                     <svg class="tw-icon">
-                      <use xlink:href="./img/sprite.svg#tw"/>
+                      <use xlink:href="./img/sprite.svg#tw" />
                     </svg>
                   </a>
                 </li>

@@ -2,6 +2,11 @@
   flex-direction: initial;
   height: initial;
   position: initial;
+  @include phone{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .footer{
   position: absolute;
@@ -12,11 +17,22 @@
 }
 .footer__column{
   width: 50%;
+  @include phone{
+    width: 100%;
+  }
+}
+.footer__column_left{
+  @include tablet{
+    width: 70%;
+  }
 }
 .footer__column_right{
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @include phone{
+    justify-content: center;
+  }
 }
 .contacts{
   font-size: rem(14px);
@@ -29,6 +45,9 @@
   color: $btn-clr;
   display: block;
   height: rem(25px);
+  @include phone{
+    display: inline-block;
+  }
 
 }
 .tel__icon{

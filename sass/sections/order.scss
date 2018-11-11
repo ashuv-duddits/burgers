@@ -1,15 +1,35 @@
 .container-order{
   justify-content: center;
+  @include tablet{
+    align-items: center;
+  }
 }
 .section-title_order{
   margin-bottom: rem(42px);
 }
+.form-wrap{
+  @include tablet{
+    display: flex;
+    justify-content: center;
+  }
+}
 .form{
   display: flex;
+  @include tablet{
+    flex-direction: column;
+    width: 60%;
+  }
+  @include tablet{
+    width: 100%;
+  }
+
 }
 .form__column{
   flex: 1;
   margin-right: rem(20px);
+  @include tablet{
+    margin-right: 0
+  }
   &:last-child{
     margin-right: 0;
 }
@@ -19,12 +39,30 @@
   margin-bottom: rem(18px);
   &:last-child{
     margin-bottom: 0;
+    @include tablet{
+      margin-bottom: rem(18px);
+    }
+  }
+}
+.form__row_phone_center{
+  @include phone{
+    justify-content: center;
   }
 }
 .form__label{
   flex: 1;
   margin-right: rem(20px);
   &:last-child{
+    margin-right: 0;
+  }
+}
+.form__label_phone{
+  @include phone{
+    display: none;
+  }
+}
+.form__label_phone_margin{
+  @include phone{
     margin-right: 0;
   }
 }

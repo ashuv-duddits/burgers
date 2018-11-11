@@ -23,6 +23,9 @@
     width: rem(500px);
     padding: rem(30px) rem(15px);
     overflow: initial;
+    @include tablet {
+      width: 100%;
+    }
   }
 }
 .accordeon-menu__link{

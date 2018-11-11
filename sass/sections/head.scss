@@ -39,11 +39,6 @@
 }
 .nav{
   margin-right: 17px;
-  @include laptop {
-    order: 3;
-    margin-left: 30px;
-    margin-right: 0;
-  }
 }
 .nav__list{
   display: flex;
@@ -73,16 +68,18 @@
   text-decoration: none;
   color: #fff;
 }
-.nav__toggle{
+.hamburger-menu-link{
   display: none;
+  vertical-align: middle;
+  margin-left: 30px;
   @include laptop {
-    display: block;
+    display: inline-block;
   }
 }
-.nav__toggle-list{
+.hamburger-menu-link__list{
   width: rem(24px);
 }
-.nav__toggle-item{
+.hamburger-menu-link__item{
   height: rem(4px);
   background-color: #fff;
   border-radius: rem(5px);
@@ -95,6 +92,8 @@
 .button{
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
   padding: rem(10px) rem(15px);
   background-color: $btn-clr;
   border-radius: rem(5px);
@@ -110,12 +109,32 @@
   margin: auto;
   display: flex;
   align-items: flex-end;
-  padding: 0 rem(16px);
+  padding-left: rem(16px);
   padding-bottom: 8%;
+  @include tablet {
+    flex-direction: column;
+    padding-left: initial;
+    padding-bottom: initial;
+    text-align: center;
+    align-items: initial;
+  }
+}
+.head__img, .head__title{
+  width: 50%;
+  @include tablet {
+    width: 100%;
+  }
 }
 .head__img{
-  margin-right: rem(7px);
-  width: 50%;
+  margin-right: rem(6px);
+  @include tablet {
+    margin-right: initial;
+    padding: 0 12%;
+    margin-bottom: rem(40px);
+  }
+  @include phone{
+    padding: 0;
+  }
 }
 .head__img-pic{
   display: block;
@@ -125,11 +144,20 @@
 .head__title{
   padding-bottom: rem(64px);
   padding-left: rem(7px);
-  width: 50%;
+  @include tablet {
+    padding: 0 5%;
+  }
+  @include phone{
+    padding: 0;
+  }
 }
 
 .section-title_head{
   text-align: initial;
+  @include tablet {
+    text-align: center;
+    margin-bottom: rem(30px);
+  }
 }
 
 .head__title-desc{
@@ -140,6 +168,12 @@
   text-transform: lowercase;
   color: #fff;
   letter-spacing: rem(-2px);
+  @include tablet {
+    letter-spacing: initial;
+  }
+  @include phone {
+    font-size: rem(50px);
+  }
   line-height: 0.92;
 }
 

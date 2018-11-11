@@ -11,11 +11,20 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: rem(100px);
+  @include tablet {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-left: initial;
+  }
 }
 
 .section-title_team{
   margin-bottom: rem(37px);
   text-align: left;
+  @include tablet {
+    text-align: center;
+  }
 }
 .accordeon__item{
   margin-bottom: rem(25px);
@@ -40,15 +49,25 @@
     border-bottom: rem(6px) solid transparent;
     border-left: rem(5px) solid transparent;
   }
+  @include tablet {
+    display: inline-block;
+  }
 }
-.reviews-team-title_margin{
+.reviews-team-title_margin_fs{
   margin-bottom: 0;
+  @include tablet {
+    font-size: rem(25px);
+  }
 }
 .accordeon__elem{
   height: 0;
   overflow: hidden;
   box-sizing: initial;
   display: flex;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .accordeon__item_active{
@@ -58,12 +77,14 @@
     padding: rem(10px) rem(14px) rem(13px) rem(14px);
   }
   .accordeon__link {
-    color: $fonts-clr_yellow;
+    
     &:before{
-      border-top: rem(6px) solid transparent;
-      border-bottom: rem(6px) solid $fonts-clr_yellow;
+      transform: rotate(-180deg);
       margin-top: rem(-5px);
     }
+  }
+  .reviews-team-title_margin_fs{
+    color: $fonts-clr_yellow;
   }
 }
 
@@ -75,6 +96,10 @@
   overflow: hidden;
   background: center center / cover no-repeat;
   margin-right: rem(22px);
+  @include tablet {
+    margin-right: initial;
+    margin-bottom: 20px;
+  }
 }
 
 .accordeon__info{
@@ -86,4 +111,5 @@
   font-weight: bold;
   margin-bottom: rem(20px);
   line-height: 1;
+  
 }
