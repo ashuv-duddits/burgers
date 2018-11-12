@@ -1,9 +1,9 @@
 .container-best{
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
-.section-title_best{
-  margin-bottom: 55px;
+.section-title_black{
+  margin-bottom: rem(42px);
   color: $fonts-clr;
 }
 .best{
@@ -15,33 +15,55 @@
   justify-content: space-between;
 }
 .best__item{
-  flex-basis: 290px;
+  width: calc(100% / 3 - 1.11rem);
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include phone {
+    flex-direction: initial;
+    width: 100%;
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
 }
 .best__icon{
-  width: 97px;
-  height: 89px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 33px;
+  width: rem(97px);
+  height: rem(89px);
+  margin-bottom: rem(33px);
+  @include phone {
+    margin-bottom: initial;
+    width: rem(125px);
+    flex-shrink: 0;
+  }
 }
-.best__img{
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
+
+.meat-icon{
+  width: rem(97px);
+  height: rem(89px);
 }
+.hand-icon{
+  width: rem(73px);
+  height: rem(86px);
+}
+.natural-icon{
+  width: rem(88px);
+  height: rem(76px);
+}
+
 .best__title{
   font-family: 'lifehack';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: rem(24px);
   text-align: center;
-  letter-spacing: -0.6px;
-  margin-bottom: 20px;
+  letter-spacing: rem(-1px);
+  margin-bottom: rem(20px);
+  @include phone{
+    margin-bottom: rem(15px);
+    text-align: left;
+  }
 }
 .best__desc{
   & p{
@@ -49,7 +71,7 @@
     font-family: 'ubuntu';
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
+    font-size: rem(14px);
     opacity: 0.8;
     line-height: 1.71;
   }

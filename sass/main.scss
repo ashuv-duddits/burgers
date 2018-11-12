@@ -2,6 +2,7 @@
 @import "layout/normalize";
 @import "layout/variables";
 @import "fonts";
+@import "mixins";
 @import "layout/setup";
 
 /* Blocks */
@@ -10,3 +11,7 @@
 @import "sections/head";
 @import "sections/best";
 @import "sections/reviews";
+@import "sections/order";
+@import "sections/team";
+@import "sections/menu";
+@import "sections/map";
