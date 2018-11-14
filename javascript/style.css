@@ -1,0 +1,24 @@
+#container{
+	display: inline-block;
+	height: 100px;
+	width: 500px;
+	border: 2px dashed #888;
+}
+#container div {
+	display: inline-block;
+	height: 50px;
+	width: 300px;
+	border: 2px dashed black;
+}
+#container a {
+	display: inline-block;
+	height: 50px;
+	width: 300px;
+	border: 2px dashed red;
+}
+#container input {
+	margin-right: 50px;
+}
+#container button {
+
+}
