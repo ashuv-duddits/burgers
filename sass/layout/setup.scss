@@ -44,7 +44,21 @@ ul li {
 p {
   margin: 0;
 }
-
+svg{
+  display: block;
+}
+button{
+  cursor: pointer;
+  padding: 0;
+  background-color: initial;
+  border: none;
+  outline: none;
+  font-family: 'ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: rem(18px);
+  line-height: 1.42;
+}
 .container {
   max-width: 940px;
   margin: 0 auto;
@@ -57,7 +71,10 @@ p {
   display: flex;
   flex-direction: column;
 }
-
+.container-center{
+  justify-content: center;
+  text-align: center;
+}
 .section {
   height: 100vh;
   min-height: 650px;
