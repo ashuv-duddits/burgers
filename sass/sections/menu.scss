@@ -38,6 +38,9 @@
   color: #fff;
   height: 100%;
   width: rem(80px);
+  @include phone {
+    width: rem(50px);
+  }
   position: relative;
   background: center center / cover no-repeat;
   &:after{

@@ -19,7 +19,7 @@
     flex-direction: column;
     width: 60%;
   }
-  @include tablet{
+  @include phone{
     width: 100%;
   }
 
