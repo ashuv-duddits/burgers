@@ -15,7 +15,7 @@
 
 .points__item{
   margin-bottom: 5px;
-  &:hover{
+  &:hover, &.points__item-active{
     .points__link{
       border-color: #fff;
     }
