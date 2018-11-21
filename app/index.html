@@ -345,7 +345,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background2.jpg')">
@@ -358,7 +358,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background3.jpg')">
@@ -371,7 +371,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background4.jpg')">
@@ -384,7 +384,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background5.jpg')">
@@ -397,7 +397,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background6.jpg')">
@@ -410,7 +410,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background7.jpg')">
@@ -423,7 +423,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
           <li class="reviews__item" style="background-image: url('./img/reviews/Background8.jpg')">
@@ -436,7 +436,7 @@
                   расплавленным.
                 </p>
               </div>
-              <a href="#" class="button button_color-black">Подробнее</a>
+              <a href="#" class="button button_color-black button_review">Подробнее</a>
             </div>
           </li>
         </ul>
@@ -445,22 +445,22 @@
         <div class="container container-order">
           <h2 class="section-title section-title_order">Закажите доставку</h2>
           <div class="form-wrap">
-            <form action="" class="form">
+            <form id="form" class="form">
               <div class="form__column">
                 <div class="form__row">
                   <label class="form__label">
                     <div class="form__title-elem">Имя</div>
-                    <input type="text" placeholder="" class="form__input">
+                    <input type="text" placeholder="" class="form__input" name="name">
                   </label>
                   <label class="form__label">
                     <div class="form__title-elem">Телефон</div>
-                    <input type="text" placeholder="" class="form__input">
+                    <input type="text" placeholder="" class="form__input" name="phone">
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__label">
                     <div class="form__title-elem">Улица</div>
-                    <input type="text" placeholder="" class="form__input">
+                    <input type="text" placeholder="" class="form__input" name="to">
                   </label>
                 </div>
                 <div class="form__row">
@@ -486,7 +486,7 @@
                 <div class="form__row">
                   <label class="form__label">
                     <div class="form__title-elem">Комментарий</div>
-                    <textarea name="" id="" placeholder="" class="form__textarea"></textarea>
+                    <textarea name="comment" placeholder="" class="form__textarea"></textarea>
                   </label>
                 </div>
                 <div class="form__row form__row_phone_center">
@@ -509,7 +509,7 @@
                   </label>
                 </div>
                 <div class="form__row form__row_phone_center">
-                  <button class="button" type="submit">Заказать</button>
+                  <button id="button" class="button" type="submit">Заказать</button>
                   <button class="button button_clear" type="reset">Очистить</button>
                 </div>
               </div>
@@ -579,8 +579,10 @@
       <li class="points__item"><a href="#" class="points__link"></a></li>
     </ul>
   </nav>
+  <div class="modal" id="modal"></div>
+  <div class="modal" id="modalForm"></div>
   <script src="js/libs.min.js"></script>
-  <script src="js/accordeon.js"></script>
+  <script src="js/ajaxForm.js"></script>
 </body>
 
 </html>
