@@ -16,6 +16,12 @@
 
 .modal__inner{
   max-width: 460px;
+  @include phone {
+    max-width: 320px;
+  }
+  @include iphone {
+    max-width: 280px;
+  }
   border-radius: 5px;
   background-color: #fff;
   padding: 20px 40px 20px 20px;
