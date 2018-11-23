@@ -18,16 +18,24 @@
   position: absolute;
 }
 
+.slider-wrap{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
 .slider__list{
   display: flex;
   align-items: center;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
   position: relative;
 }
 
 .slider__item{
-  min-width: 100%;
+  flex-basis: 940px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -113,7 +121,7 @@
   }
   &:hover{
     background-color: rgba($fonts-clr_red, 1);
-    .slider__composition-list{
+    .slider__composition-wrap{
       left: 100%;
       opacity: 1;
     }
@@ -226,7 +234,8 @@
   height: rem(34px);
 }
 
-.slider__composition-list{
+
+.slider__composition-wrap{
   width: rem(270px);
   @include phone {
     width: rem(370px);;
@@ -241,16 +250,22 @@
   border-radius: rem(5px);
   transition: opacity 0.5s;
 }
+.slider__composition-list{
+  
+}
 .slider__composition-close{
   position: absolute;
   top: 10px;
   right: -9999px;
+  visibility: hidden;
   @include phone {
     right: 10px;
+    visibility: visible;
   }
   height: 18px;
   width: 18px;
-  .slider__composition-close-left{
+  &:before{
+    content:"";
     position: absolute;
     top: 7px;
     left: 0;
@@ -259,7 +274,8 @@
     background-color: rgba($fonts-clr_red,0.7);
     transform: rotate(45deg);
   }
-  .slider__composition-close-right{
+  &:after{
+    content:"";
     position: absolute;
     bottom: 7px;
     left: 0;

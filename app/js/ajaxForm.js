@@ -11,7 +11,7 @@ var overlay = (function(){
     content.remove();
     link.remove();
     innerOverlay.remove();
-  }
+  };
 
   /* Открыть модальное окно */
 
@@ -35,13 +35,13 @@ var overlay = (function(){
 
     overlay.classList.add('modal_active');
     document.body.classList.add('block-scroll');
-  }
+  };
 
   return {
     open: openOverlay,
     close: closeOverlay
-  }
-})()
+  };
+})();
 
 /* Функция отправки данных на сервер */
 
@@ -66,7 +66,7 @@ let ajax = function(form){
   xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.send(formData);
   return xhr;
-}
+};
 
 /* Функция обработки ответа от сервера */
 
@@ -80,9 +80,8 @@ var submitForm = function(e){
     content.innerHTML = request.response.message;
     overlay.open('#modalForm', content);
   })
-}
-const form = document.querySelector('#form');
-form.addEventListener('submit', submitForm);
+};
+
 
 /* Открыть модальное окно отзыва */
 
@@ -102,6 +101,6 @@ let reviewOpen = function(){
       overlay.open('#modal', content);
     }
   })
-}
-reviewOpen();
+};
 
+export {submitForm, reviewOpen}

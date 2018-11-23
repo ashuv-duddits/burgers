@@ -17,13 +17,5 @@ var accordeon = function(){
   }
   return {init: startAccordeon}
 }
-accordeon().init({
-  accordeonList: '.accordeon',
-  accordeonItem: 'accordeon__item',
-  accordeonItemActive: 'accordeon__item_active'
-});
-accordeon().init({
-  accordeonList: '.accordeon-menu',
-  accordeonItem: 'accordeon-menu__item',
-  accordeonItemActive: 'accordeon-menu__item_active'
-});
+
+export {accordeon}

@@ -1,7 +1,7 @@
 var menu = (function(option){
   const hamburgerMenuLink = document.querySelector(option.button);
   const hamburgerMenu = document.querySelector(option.overlay);
-  const hamburgerMenuList = document.querySelector('.hamburger-menu__list').children;
+  const hamburgerMenuList = document.querySelector(option.list).children;
   const body = document.body;
   var isActiveMenu = false;
   var counter = 0;
@@ -45,19 +45,19 @@ var menu = (function(option){
       }
     })
   }
-
   return {open: openMenu};
 })({
   button: '.hamburger-menu-link',
   overlay: '.hamburger-menu',
+  list: '.hamburger-menu__list',
   overlayLink: 'hamburger-menu__link',
   buttonClassToggle: 'hamburger-menu-link-active',
   overlayClassToggle: 'hamburger-menu-active',
   bodyBlockScroll: 'block-scroll'
-})
+});
 
 
-module.exports = menu;
+export {menu}
 
 
 
