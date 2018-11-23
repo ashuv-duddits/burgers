@@ -258,3 +258,29 @@ form.addEventListener('submit', submitForm);
 
 /* Акивировать функционал модального окна отзыва */
 reviewOpen();
+
+/* Функционал One Page Scroll */
+var ops = (function(){
+  const maincontent = document.querySelector('.maincontent');
+  let start = function(){
+    maincontent.addEventListener('wheel', function(e){
+      const computed = getComputedStyle(this);
+      const sectionsAmount = this.children.length;
+      var height = parseInt(computed.height)/sectionsAmount;
+      let currentTop = parseInt(computed.top);
+      if (!currentTop) {
+        currentTop = 0;
+      }
+      if ((currentTop%height==0)||(currentTop==0)){
+        if ((e.deltaY > 0)&&(Math.abs(currentTop)<height*(sectionsAmount-1))) {
+          this.style.top = currentTop - height + 'px';
+        }else if ((e.deltaY < 0)&&(currentTop<0)){
+          this.style.top = currentTop + height + 'px';
+        }
+     }
+    })
+  }
+  return {init: start};
+})()
+
+ops.init();

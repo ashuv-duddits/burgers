@@ -107,8 +107,13 @@ button{
   position: relative;
   min-height: 100%;
   overflow: hidden;
+  height: 100vh;
 }
-
+.maincontent{
+  position: relative;
+  top: 0;
+  transition: top 0.5s;
+}
 body {
   font-family: 'ubuntu', Helvetica, sans-serif;
   font-weight: 300;
