@@ -8,8 +8,8 @@ var overlay = (function(){
     let overlay = document.querySelector(modalId);
     let innerOverlay = document.querySelector(`.${modalId.substr(1)}__inner`);
     let link = document.querySelector(`.${modalId.substr(1)}__close`);
+    overlay.removeEventListener('click', closeOver);
     content.remove();
-    console.log(link);
     link.remove();
     innerOverlay.remove();
     overlay.classList.remove('modal_active');
@@ -17,24 +17,29 @@ var overlay = (function(){
   };
 
   /* Открыть модальное окно */
-
+  var closeOver;
+ 
   let openOverlay = function(modalId, content){
     let overlay = document.querySelector(modalId);
     let innerOverlay = document.createElement('div');
-    innerOverlay.classList.add(`${modalId.substr(1)}__inner`)
+    innerOverlay.classList.add(`${modalId.substr(1)}__inner`);
     overlay.appendChild(innerOverlay);
     innerOverlay.appendChild(content);
     let link = document.createElement('a');
     link.setAttribute('href', '#');
     link.classList.add(`${modalId.substr(1)}__close`);
     innerOverlay.appendChild(link);
-
-    overlay.addEventListener('click', function(e){
+    closeOver = function(e){
       e.preventDefault();
+      console.log(e.target);
+      console.log(e.currentTarget);
+      console.log(this);
       if ((e.target === e.currentTarget)||(e.target.className === link.className)){
+        
         closeOverlay(modalId, content);
       }
-    })
+    }
+    overlay.addEventListener('click', closeOver);
 
     overlay.classList.add('modal_active');
     document.body.classList.add('block-scroll');

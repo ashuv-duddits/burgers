@@ -7,7 +7,7 @@ var accordeon = function(){
       e.preventDefault();
       var item = e.target.parentNode.parentNode;
       var itemA = e.target.parentNode;
-      for (i of accordeonList.children){   
+      for (let i of accordeonList.children){   
         if ((i.classList.contains(option.accordeonItemActive))&&((item.classList.contains(option.accordeonItem))||(itemA.classList.contains(option.accordeonItem)))){
           i.classList.remove(option.accordeonItemActive);
         }
