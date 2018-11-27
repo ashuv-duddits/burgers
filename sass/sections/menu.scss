@@ -20,13 +20,9 @@
 }
 .accordeon-menu__item_active{
   .accordeon-menu__desc{
-    width: rem(550px);
     padding: rem(30px) rem(15px);
     opacity: 1;
     overflow: initial;
-    @include tablet {
-      width: 100%;
-    }
   }
 }
 .accordeon-menu__link{

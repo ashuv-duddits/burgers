@@ -11,12 +11,14 @@ menu.open();
 accordeon().init({
   accordeonList: '.accordeon',
   accordeonItem: '.accordeon__item',
-  accordeonItemActive: '.accordeon__item_active'
+  accordeonItemActive: '.accordeon__item_active',
+  accordeonElem: '.accordeon__elem'
 });
 accordeon().init({
   accordeonList: '.accordeon-menu',
   accordeonItem: '.accordeon-menu__item',
-  accordeonItemActive: '.accordeon-menu__item_active'
+  accordeonItemActive: '.accordeon-menu__item_active',
+  accordeonElem: '.accordeon-menu__desc'
 });
 
 /* Акивировать функционал слайдера */
