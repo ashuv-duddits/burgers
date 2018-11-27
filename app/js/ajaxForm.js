@@ -31,9 +31,6 @@ var overlay = (function(){
     innerOverlay.appendChild(link);
     closeOver = function(e){
       e.preventDefault();
-      console.log(e.target);
-      console.log(e.currentTarget);
-      console.log(this);
       if ((e.target === e.currentTarget)||(e.target.className === link.className)){
         
         closeOverlay(modalId, content);
