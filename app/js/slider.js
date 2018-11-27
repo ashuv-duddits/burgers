@@ -16,9 +16,10 @@
       if (!currentRight) {
         currentRight = 0;
       }
-      
-      if (currentRight < (sliderItemsAmount-1)*sliderWidth) {
-        slider.style.right = currentRight + sliderWidth + "px";
+      if ((currentRight%sliderWidth==0)||(currentRight==0)){
+        if (currentRight < (sliderItemsAmount-1)*sliderWidth) {
+          slider.style.right = currentRight + sliderWidth + "px";
+        }
       }
     });
     
@@ -29,9 +30,10 @@
       if (!currentRight) {
         currentRight = 0;
       }
-    
-      if (currentRight > 0) {
-        slider.style.right = currentRight - sliderWidth + "px";
+      if ((currentRight%sliderWidth==0)||(currentRight==0)){
+        if (currentRight > 0) {
+          slider.style.right = currentRight - sliderWidth + "px";
+        }
       }
     });
   }
