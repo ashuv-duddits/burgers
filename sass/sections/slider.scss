@@ -26,6 +26,9 @@
 }
 
 .slider__list{
+  right: 0;
+  transition: right 0.5s;
+  transition-timing-function: ease;
   display: flex;
   align-items: center;
   width: 100%;

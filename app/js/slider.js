@@ -1,5 +1,6 @@
 /* Функционал слайдера */
-const slide = (function(option){
+
+  const slide = (function(option){
   const left = document.querySelector(option.l);
   const right = document.querySelector(option.r);
   const slider = document.querySelector(option.list);
