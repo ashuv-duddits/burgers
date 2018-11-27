@@ -61,6 +61,8 @@
 }
 .accordeon__elem{
   height: 0;
+  //will-change: height;
+  transition: height 1s;
   overflow: hidden;
   box-sizing: initial;
   display: flex;
@@ -72,7 +74,6 @@
 
 .accordeon__item_active{
   .accordeon__elem{
-    height: initial;
     overflow: initial;
     padding: rem(10px) rem(14px) rem(13px) rem(14px);
   }

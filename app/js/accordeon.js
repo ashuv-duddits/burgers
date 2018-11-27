@@ -5,14 +5,16 @@ var accordeon = function(){
     const accordeonList = document.querySelector(option.accordeonList);
     accordeonList.addEventListener('click', function(e){
       e.preventDefault();
-      var item = e.target.parentNode.parentNode;
-      var itemA = e.target.parentNode;
-      for (let i of accordeonList.children){   
-        if ((i.classList.contains(option.accordeonItemActive))&&((item.classList.contains(option.accordeonItem))||(itemA.classList.contains(option.accordeonItem)))){
-          i.classList.remove(option.accordeonItemActive);
-        }
-        if ((item === i)||(itemA === i)){
-          i.classList.add(option.accordeonItemActive);
+      var reqItem = e.target.closest(option.accordeonItem),
+          reqElem = reqItem!=null?reqItem.querySelector('.accordeon__elem'):null,
+          activeItem = document.querySelector(option.accordeonItem+option.accordeonItemActive),
+          activeElem = activeItem.querySelector('.accordeon__elem');
+      if (reqElem!=null){
+        if (!reqItem.classList.contains('accordeon__item_active')){
+          activeElem.style.height = '0px';
+          activeItem.classList.remove('accordeon__item_active');
+          reqElem.style.height = reqElem.scrollHeight + 'px';
+          reqItem.classList.add('accordeon__item_active');
         }
       }
     })

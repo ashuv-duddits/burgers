@@ -10,13 +10,13 @@ menu.open();
 /* Акивировать функционал горизонтального и вертикального аккордеонов */
 accordeon().init({
   accordeonList: '.accordeon',
-  accordeonItem: 'accordeon__item',
-  accordeonItemActive: 'accordeon__item_active'
+  accordeonItem: '.accordeon__item',
+  accordeonItemActive: '.accordeon__item_active'
 });
 accordeon().init({
   accordeonList: '.accordeon-menu',
-  accordeonItem: 'accordeon-menu__item',
-  accordeonItemActive: 'accordeon-menu__item_active'
+  accordeonItem: '.accordeon-menu__item',
+  accordeonItemActive: '.accordeon-menu__item_active'
 });
 
 /* Акивировать функционал слайдера */

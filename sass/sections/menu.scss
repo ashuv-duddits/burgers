@@ -20,8 +20,9 @@
 }
 .accordeon-menu__item_active{
   .accordeon-menu__desc{
-    width: rem(500px);
+    width: rem(550px);
     padding: rem(30px) rem(15px);
+    opacity: 1;
     overflow: initial;
     @include tablet {
       width: 100%;
@@ -70,5 +71,7 @@
   background-color: rgba(#141414, 0.7);
   color: #fff;
   width: 0;
+  opacity: 0;
+  transition: width 0.5s;
   overflow: hidden;
 }
