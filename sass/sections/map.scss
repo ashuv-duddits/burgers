@@ -8,6 +8,40 @@
     text-align: center;
   }
 }
+
+.maps{
+  height: 80%;
+ // margin-bottom: 100px;
+}
+.map__hint{
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: $fonts-clr_red;
+  color: #fff;
+  font-family: 'lifehack';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+}
+.map__balloon{
+  background-color: rgba(#000,0.1);
+  color: $fonts-clr_red;
+  font-family: 'gagalin';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.map__icon{
+
+}
+.map-marker-icon{
+  width: 46px;
+  height: 58px;
+}
+
+
 .footer{
   position: absolute;
   right: 0;

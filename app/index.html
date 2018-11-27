@@ -29,7 +29,7 @@
                   <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
                   <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
                   <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-                  <li class="nav__item"><a href="#map" class="nav__link">Контакты</a></li>
+                  <li class="nav__item"><a href="#maps" class="nav__link">Контакты</a></li>
                 </ul>
               </nav>
               <div class="head__btns">
@@ -52,7 +52,7 @@
                     <li class="hamburger-menu__item"><a href="#menu" class="hamburger-menu__link">Меню</a></li>
                     <li class="hamburger-menu__item"><a href="#reviews" class="hamburger-menu__link">Отзывы</a></li>
                     <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Как мы работаем</a></li>
-                    <li class="hamburger-menu__item"><a href="#map" class="hamburger-menu__link">Контакты</a></li>
+                    <li class="hamburger-menu__item"><a href="#maps" class="hamburger-menu__link">Контакты</a></li>
                   </ul>
                 </div>
               </div>
@@ -912,7 +912,13 @@
           </div>
         </div>
       </section>
-      <section id="map" class="section map" style="background-image:url('img/backgrounds/map.jpg')">
+      <section id="maps" class="section map" style="background-image:url('img/backgrounds/map.jpg')">
+        <div id="map" class="maps"></div>
+        <!-- <div class="map__icon">
+          <svg class="map-marker-icon">
+            <use xlink:href="./img/sprite.svg#map-marker"></use>
+          </svg>
+        </div> -->
         <footer class="footer" style="background-image:url('img/backgrounds/bg_foot.jpg')">
           <div class="container container-footer">
             <div class="footer__column footer__column_left">
@@ -977,6 +983,7 @@
   <div class="modal" id="modal"></div>
   <div class="modal" id="modalForm"></div>
   <script src="js/libs.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8a459371-8c61-4bd6-b766-7a0d75576d00&lang=ru_RU" type="text/javascript"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 
