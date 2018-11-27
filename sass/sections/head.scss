@@ -80,27 +80,6 @@
   @include laptop {
     display: inline-block;
   }
-  &:not(.hamburger-menu-link-active):hover{
-    .hamburger-menu-link__item{
-      &:nth-child(1){
-        transform: rotate(-3deg) scaleY(1.1);
-      }
-    }
-  } 
-  &:not(.hamburger-menu-link-active):hover{
-    .hamburger-menu-link__item{
-      &:nth-child(2){
-        transform: rotate(3deg) scaleY(1.1);
-      }
-    }
-  }
-  &:not(.hamburger-menu-link-active):hover{
-    .hamburger-menu-link__item{
-      &:nth-child(3){
-        transform: rotate(-4deg) scaleY(1.1);
-      }
-    }
-  }
 }
 
 .hamburger-menu-link__item{
@@ -186,9 +165,9 @@
 
 .hamburger-menu__link{
   @extend .nav__link;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   font-weight: normal;
-  font-size: 24px;
+  font-size: rem(24px);
   display: block;
   width: 100%;
   text-align: center;
@@ -210,6 +189,9 @@
   font-size: rem(13px);
   font-weight: 500;
   color: #fff;
+  @include iphone {
+    font-size: rem(14px);
+  }
   &:hover{
     background-color: $btn-clr-hover;
   }
