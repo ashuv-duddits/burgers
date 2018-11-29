@@ -89,7 +89,7 @@ function htmls() {
   
 function images() {
 	return src(paths.src + 'img/**/*.{jpg,jpeg,png,gif,svg}')
-	  .pipe(imagemin()) // если картинок будет много, то и времени будет уходить много
+	  //.pipe(imagemin()) // если картинок будет много, то и времени будет уходить много
 	  .pipe(dest(paths.build + 'img/'));
 }
 
