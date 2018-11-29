@@ -4,6 +4,34 @@ var ops = (function(){
   const pointsList = document.querySelector('.points__list');
   const headBtns = document.querySelector('.head__buttons');
 
+
+  /* Для смартфона */
+  var touchStart = 0;
+  maincontent.addEventListener('touchstart', function(e){
+    touchStart = parseInt(e.changedTouches[0].clientY);
+  })
+  maincontent.addEventListener('touchend', function(e){
+    var activeSlide = this.querySelector('.section-active'),
+    activeIndex = Array.from(this.children).indexOf(activeSlide),
+    nextItem = activeSlide!=null?activeSlide.nextElementSibling:null,
+    prevItem = activeSlide!=null?activeSlide.previousElementSibling:null,
+    reqIndex, existedItem, edgeIndex;
+
+      if(Math.abs(parseInt(e.changedTouches[0].clientY) - touchStart)>50){
+        if(parseInt(e.changedTouches[0].clientY) < touchStart){
+          existedItem = nextItem;
+          edgeIndex=activeIndex+1;
+        }else{
+          existedItem = prevItem;
+          edgeIndex=activeIndex-1;
+        }
+      }
+    reqIndex = existedItem!=null ? edgeIndex : activeIndex;
+
+    moveSlide(reqIndex, activeIndex);
+  })
+
+/* Функция разукрашивания точек */
   var coloringDots = function(index){
     const dotList = document.querySelector('.points__list');
     for(let i of dotList.children){
@@ -14,6 +42,7 @@ var ops = (function(){
     dotList.children[index].classList.add('points__item-active');
   };
 
+/* Функция движения  */
   var moveSlide = function(reqIndex, activeIndex){
     const computed = getComputedStyle(maincontent);
     const sectionsAmount = maincontent.children.length;
@@ -29,6 +58,8 @@ var ops = (function(){
   }
 
   let start = function(){
+
+  /* Генерируем точки */
 
     var generateDots = function(){
       const items = document.querySelectorAll('.section');
@@ -51,7 +82,7 @@ var ops = (function(){
     generateDots();
 
 
-
+/* Для компьютера */
     maincontent.addEventListener('wheel', function(e){
       var activeSlide = this.querySelector('.section-active'),
           activeIndex = Array.from(this.children).indexOf(activeSlide),
@@ -72,7 +103,7 @@ var ops = (function(){
 
       moveSlide(reqIndex, activeIndex);
     });
-
+/* По нажатию на точку */
     pointsList.addEventListener('click', function(e){
       e.preventDefault();
       var $this = e.target.closest('.points__item'),
@@ -82,7 +113,7 @@ var ops = (function(){
       moveSlide(reqIndex, activeIndex);
 
     })
-
+/* Нажатие на кнопки меню */
     headBtns.addEventListener('click', function(e){
       e.preventDefault();
       var items = maincontent.querySelectorAll('.section'),

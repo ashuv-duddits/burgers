@@ -1,0 +1,82 @@
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: -9999px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba($fonts-clr, 0.92);
+}
+.modal_active{
+  left: 0;
+}
+
+.modal__inner{
+  max-width: 460px;
+  @include phone {
+    max-width: 320px;
+  }
+  @include iphone {
+    max-width: 280px;
+  }
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px 40px 20px 20px;
+  position: relative;
+}
+.modalForm__inner{
+  max-width: 460px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.modal-black{
+  .reviews-team-title{
+    color: $fonts-clr;
+  }
+  .reviews__desc{
+    margin-bottom: 0;
+    p{
+      color: $fonts-clr;
+    }
+  }
+}
+.modal__close{
+position: absolute;
+top: 10px;
+right: 10px;
+height: 18px;
+width: 18px;
+  &:after{
+    content:"";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 4px;
+    width: 18px;
+    background-color: rgba($fonts-clr_red,0.7);
+    transform: rotate(45deg);
+  }
+  &:before{
+    content:"";
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    height: 4px;
+    width: 18px;
+    background-color: rgba($fonts-clr_red,0.7);
+    transform: rotate(-45deg);
+  }
+}
+.modalForm__close{
+  display: inline-block;
+  margin-top: 15px;
+  &:before{
+    content: "Закрыть";
+  }
+  @extend .button;
+}

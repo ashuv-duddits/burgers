@@ -1,0 +1,114 @@
+
+.team__wrap{
+  position: absolute;
+  width: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $fonts-clr;
+  opacity: 0.93;
+  display: flex;
+  padding-top: 110px;
+  justify-content: flex-start;
+  padding-left: rem(100px);
+  @include tablet {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-left: initial;
+  }
+}
+
+.section-title_team{
+  margin-bottom: rem(37px);
+  text-align: left;
+  @include tablet {
+    text-align: center;
+  }
+}
+.accordeon__item{
+  margin-bottom: rem(25px);
+}
+.accordeon__link{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  position: relative;
+  padding-left: rem(18px);
+  &:before{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    border-top: rem(6px) solid $fonts-clr_yellow;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(6px) solid transparent;
+    border-left: rem(5px) solid transparent;
+  }
+  @include tablet {
+    display: inline-block;
+  }
+}
+.reviews-team-title_margin_fs{
+  margin-bottom: 0;
+  @include tablet {
+    font-size: rem(25px);
+  }
+}
+.accordeon__elem{
+  height: 0;
+  transition: height 1s;
+  overflow: hidden;
+  box-sizing: initial;
+  display: flex;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.accordeon__item_active{
+  .accordeon__elem{
+    padding: rem(10px) rem(14px) rem(13px) rem(14px);
+  }
+  .accordeon__link {
+    
+    &:before{
+      transform: rotate(-180deg);
+      margin-top: rem(-5px);
+    }
+  }
+  .reviews-team-title_margin_fs{
+    color: $fonts-clr_yellow;
+  }
+}
+
+.accordeon__pic{
+  flex-shrink: 0;
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+  overflow: hidden;
+  background: center center / cover no-repeat;
+  margin-right: rem(22px);
+  @include tablet {
+    margin-right: initial;
+    margin-bottom: 20px;
+  }
+}
+
+.accordeon__info{
+  color: #fff;
+  font-size: rem(14px);
+}
+
+.accordeon__title{
+  font-weight: bold;
+  margin-bottom: rem(20px);
+  line-height: 1;
+  
+}
