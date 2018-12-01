@@ -33,7 +33,8 @@ function styles() {
 		.pipe(autoprefixer({browsers: ['last 4 versions'], cascade: false}))
 		.pipe(cleanCSS())
 	.pipe(sourcemaps.write('/'))
-    .pipe(dest(paths.build + 'css/'))
+		.pipe(dest(paths.build + 'css/'))
+		.pipe(browserSync.stream());
 };
 
 function scripts() {
@@ -98,7 +99,7 @@ function clean() {
 }
 
 function watcher() {
-	watch(paths.src + 'sass/*.scss', styles);
+	watch(paths.src + 'sass/**/*.scss', styles);
 	watch(paths.src + 'js/*.js', scripts);
 	watch(paths.src + '*.html', htmls);
 }
@@ -110,7 +111,7 @@ function serve(){
 		},
 		notify: false
 	});
-	browserSync.watch(paths.build + '**/*.*', browserSync.reload);
+	browserSync.watch(paths.build + '**/*.{html,js}', browserSync.reload);
 }
 
 exports.styles = styles;

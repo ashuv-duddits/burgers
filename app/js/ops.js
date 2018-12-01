@@ -4,11 +4,17 @@ var ops = (function(){
   const pointsList = document.querySelector('.points__list');
   const headBtns = document.querySelector('.head__buttons');
 
-
+/* jQuery plagin for detected mobile device */
+var md = new MobileDetect(window.navigator.userAgent);
+if (md.mobile()){
   /* Для смартфона */
   var touchStart = 0;
   maincontent.addEventListener('touchstart', function(e){
     touchStart = parseInt(e.changedTouches[0].clientY);
+    console.log(e);
+  })
+  maincontent.addEventListener('touchmove', function(e){
+    e.preventDefault();
   })
   maincontent.addEventListener('touchend', function(e){
     var activeSlide = this.querySelector('.section-active'),
@@ -30,6 +36,8 @@ var ops = (function(){
 
     moveSlide(reqIndex, activeIndex);
   })
+}
+
 
 /* Функция разукрашивания точек */
   var coloringDots = function(index){
@@ -130,6 +138,34 @@ var ops = (function(){
       }
   
     })
+
+  /* Нажатие на стрелки клавиатуры */
+  document.addEventListener('keydown', function(e){
+    var activeSlide = maincontent.querySelector('.section-active'),
+    activeIndex = Array.from(maincontent.children).indexOf(activeSlide),
+    nextItem = activeSlide!=null?activeSlide.nextElementSibling:null,
+    prevItem = activeSlide!=null?activeSlide.previousElementSibling:null,
+    reqIndex, existedItem, edgeIndex;
+    console.log(e.keyCode);
+    if (e.keyCode == 40) { //down
+      existedItem = nextItem;
+      edgeIndex=activeIndex+1;
+    }
+    if (e.keyCode == 38) { //up
+      existedItem = prevItem;
+      edgeIndex=activeIndex-1;
+    }
+
+    reqIndex = existedItem!=null ? edgeIndex : activeIndex;
+
+    moveSlide(reqIndex, activeIndex);
+
+  })
+  /* Нажатие на стрелку вниз в шапке сайта */
+  var headDown = document.querySelector('.head__down');
+  headDown.addEventListener('click', function(){
+    moveSlide(1, 0);
+  })
   }
   return {init: start};
 })()

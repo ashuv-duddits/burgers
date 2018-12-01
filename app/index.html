@@ -839,7 +839,38 @@
       <section id="player" class="section player" style="background-image:url('img/backgrounds/bg_player.jpg')">
         <h2 class="section-title section-title_black">Как мы работаем</h2>
         <div class="player__wrap">
-          <video class="player__video" src="./video/loftschool.mp4" controls></video>
+          <div class="player__play player__play-img player__play-bg">
+            <video class="player__video" src="./video/loftschool.mp4"></video>
+            <div class="player__play-icon">
+              <a href="#" class="player__play-link">
+                <svg class="play-icon">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="player__controls">
+              <div class="player__toolbar">
+                <a href="#" class="player__toolbar-icon">
+                  <svg class="play-icon" >
+                    <use xlink:href="./img/sprite.svg#play"></use>
+                  </svg>
+                </a>
+                <div class="player__toolbar-range">
+                  <div class="player__toolbar-range-circle"></div>
+                </div>
+              </div>
+              <div class="player__volume">
+                <a  href="#" class="player__volume-icon">
+                  <svg class="volume-icon" >
+                    <use xlink:href="./img/sprite.svg#volume"></use>
+                  </svg>
+                </a>
+                <div class="player__volume-range">
+                  <div class="player__volume-range-circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="order" class="section order" style="background-image:url('img/backgrounds/bg_order.jpg')">
@@ -989,6 +1020,8 @@
   <div class="modal" id="modal"></div>
   <div class="modal" id="modalForm"></div>
   <!-- <script src="js/libs.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=8a459371-8c61-4bd6-b766-7a0d75576d00&lang=ru_RU" type="text/javascript"></script>
   <script type="module" src="js/main.js"></script>
 </body>
