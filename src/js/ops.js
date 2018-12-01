@@ -146,7 +146,6 @@ if (md.mobile()){
     nextItem = activeSlide!=null?activeSlide.nextElementSibling:null,
     prevItem = activeSlide!=null?activeSlide.previousElementSibling:null,
     reqIndex, existedItem, edgeIndex;
-    console.log(e.keyCode);
     if (e.keyCode == 40) { //down
       existedItem = nextItem;
       edgeIndex=activeIndex+1;
