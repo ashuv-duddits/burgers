@@ -63,8 +63,8 @@
   height: 0;
   transition: height 1s;
   overflow: hidden;
-  box-sizing: initial;
   display: flex;
+  margin: rem(10px) rem(14px) rem(13px) rem(14px);
   @include tablet {
     flex-direction: column;
     align-items: center;
@@ -72,9 +72,6 @@
 }
 
 .accordeon__item_active{
-  .accordeon__elem{
-    padding: rem(10px) rem(14px) rem(13px) rem(14px);
-  }
   .accordeon__link {
     
     &:before{

@@ -19,6 +19,9 @@
   display: flex;
 }
 .accordeon-menu__item_active{
+  .accordeon-menu__text{
+    color: $fonts-clr_yellow;
+  }
   .accordeon-menu__desc{
     padding: rem(30px) rem(15px);
     opacity: 1;
