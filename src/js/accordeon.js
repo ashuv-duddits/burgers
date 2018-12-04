@@ -18,14 +18,14 @@ var accordeon = function(){
       var fps = 50; //число кадров в секунду
       var calcWidth = calculateWidth();
       var start = Date.now(); // сохранить время начала
-      var duration = 200;
-
+      var duration = 300;
       if (moveTo == 1){
         var interval = setInterval(function() {
           // вычислить сколько времени прошло с начала анимации
           var timeFraction = (Date.now() - start)/duration;
           if (timeFraction>=1){timeFraction=1}
           // рисует состояние анимации
+          console.log('ВПЕРЕД');
           draw(timeFraction);
           if (timeFraction >= 1) {
               clearInterval(interval);
@@ -41,6 +41,7 @@ var accordeon = function(){
           var timeFraction = (Date.now() - start)/duration;
           if (timeFraction>=1){timeFraction=1}
           // рисует состояние анимации
+          console.log('НАЗАД');
           draw(1-timeFraction);
           if (timeFraction >= 1) {
               clearInterval(intervalZero);

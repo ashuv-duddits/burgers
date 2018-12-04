@@ -44,3 +44,17 @@ ymap.start();
 
 /* Активация плеера */
 player.init();
+
+
+/* Наведение мышкой на ингридиенты */
+const compositionButton = document.querySelector('.slider__composition');
+const compositionClose = document.querySelector('.slider__composition-close');
+compositionButton.addEventListener('mouseenter', function(){
+  this.classList.add('slider__composition_active');
+})
+compositionButton.addEventListener('mouseleave', function(){
+  this.classList.remove('slider__composition_active');
+})
+compositionClose.addEventListener('click', function(){
+  compositionButton.classList.remove('slider__composition_active');
+})

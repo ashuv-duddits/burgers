@@ -61,7 +61,7 @@
 }
 .accordeon__elem{
   height: 0;
-  transition: height 1s;
+  transition: height 0.3s;
   overflow: hidden;
   display: flex;
   margin: rem(10px) rem(14px) rem(13px) rem(14px);

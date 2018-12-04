@@ -127,14 +127,15 @@
   @include laptop {
     bottom: 97%;
   }
-  &:hover{
-    background-color: rgba($fonts-clr_red, 1);
-    .slider__composition-wrap{
-      left: 100%;
-      opacity: 1;
-    }
+}
+.slider__composition_active{
+  background-color: rgba($fonts-clr_red, 1);
+  .slider__composition-wrap{
+    left: 100%;
+    opacity: 1;
   }
 }
+
 .slider__composition-icon{
   margin-bottom: rem(5px);
   display: flex;
@@ -247,6 +248,7 @@
 
 .slider__composition-wrap{
   width: rem(270px);
+  cursor: initial;
   @include phone {
     padding-right: 40px;
   }
@@ -259,9 +261,7 @@
   border-radius: rem(5px);
   transition: opacity 0.5s;
 }
-.slider__composition-list{
-  
-}
+
 .slider__composition-close{
   position: absolute;
   top: 10px;
