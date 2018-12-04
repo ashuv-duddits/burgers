@@ -14,24 +14,45 @@ var accordeon = function(){
 
 
 
-    var animateWidth = function(reqElem, callback){
+    var animateWidth = function(reqElem, callback, moveTo){
       var fps = 50; //число кадров в секунду
       var calcWidth = calculateWidth();
-      var interval = setInterval(function() {
-        // вычислить чему равна ширина на каждом кадре анимации
-      var actualWidth = parseFloat(getComputedStyle(reqElem).width);
-      if (actualWidth >= calcWidth) {
-          clearInterval(interval);
-          callback(reqElem);
-          return;
-        }
-        // рисует состояние анимации
-      draw(actualWidth+100);
+      var start = Date.now(); // сохранить время начала
+      var duration = 200;
 
-      }, 1000/fps);
+      if (moveTo == 1){
+        var interval = setInterval(function() {
+          // вычислить сколько времени прошло с начала анимации
+          var timeFraction = (Date.now() - start)/duration;
+          if (timeFraction>=1){timeFraction=1}
+          // рисует состояние анимации
+          draw(timeFraction);
+          if (timeFraction >= 1) {
+              clearInterval(interval);
+              callback(reqElem);
+              return;
+            }
 
-      function draw(actWidth) {
-        reqElem.style.width = actWidth + 'px';
+    
+          }, 1000/fps);
+      } else {
+        var intervalZero = setInterval(function() {
+          // вычислить сколько времени прошло с начала анимации
+          var timeFraction = (Date.now() - start)/duration;
+          if (timeFraction>=1){timeFraction=1}
+          // рисует состояние анимации
+          draw(1-timeFraction);
+          if (timeFraction >= 1) {
+              clearInterval(intervalZero);
+              return;
+            }
+    
+          }, 1000/fps);
+      }
+
+
+      function draw(timeFraction) {
+        reqElem.style.width = timeFraction*calcWidth + 'px';
       }
     }
 
@@ -45,6 +66,8 @@ var accordeon = function(){
     const accordeonActiveMenuItem = document.querySelector('.accordeon-menu__item_active');
     const accordeonActiveMenuElem = accordeonActiveMenuItem.querySelector('.accordeon-menu__desc');
     accordeonActiveMenuElem.style.width = calculateWidth() + 'px';
+    const accordeonActiveMenuElemText = accordeonActiveMenuElem.querySelector('.accordeon-menu__desc-text');
+    accordeonActiveMenuElemText.style.opacity = 1;
 
 
     accordeonList.addEventListener('click', function(e){
@@ -61,18 +84,19 @@ var accordeon = function(){
           reqItem.classList.add('accordeon__item_active');
         };
         if ((!reqItem.classList.contains('accordeon-menu__item_active'))&&(reqItem.classList.contains('accordeon-menu__item'))){
-          activeElem.style.width = '0px';
+          
           activeItem.classList.remove('accordeon-menu__item_active');
-          activeElem.querySelector('.accordeon-menu__desc-text').style.opacity = 0;
-          reqItem.classList.add('accordeon-menu__item_active');
+          const activeText = activeElem.querySelector('.accordeon-menu__desc-text');
+          activeText.style.opacity = 0;
+          
+          animateWidth(activeElem, null, 0);
 
+          reqItem.classList.add('accordeon-menu__item_active');
           function callback(reqElem){
             const reqText = reqElem.querySelector('.accordeon-menu__desc-text');
             reqText.style.opacity = 1;
-            console.log('reqText.style.opacity');
           }
-
-          animateWidth(reqElem, callback);
+          animateWidth(reqElem, callback, 1);
           
         };
       }

@@ -23,7 +23,7 @@
     color: $fonts-clr_yellow;
   }
   .accordeon-menu__desc-text{
-    opacity: 1;
+    transition: opacity 2s;
   }
 }
 .accordeon-menu__link{
@@ -75,5 +75,4 @@
   color: #fff;
   margin: rem(30px) rem(15px);
   opacity: 0;
-  transition: opacity 2s;
 }
