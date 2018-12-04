@@ -11,6 +11,31 @@ var accordeon = function(){
       let reqWidth = windowWidth - linksWidth*links.length;
       return reqWidth > 550 ? 550 : reqWidth;
     }
+
+
+
+    var animateWidth = function(reqElem, callback){
+      var fps = 50; //число кадров в секунду
+      var calcWidth = calculateWidth();
+      var interval = setInterval(function() {
+        // вычислить чему равна ширина на каждом кадре анимации
+      var actualWidth = parseFloat(getComputedStyle(reqElem).width);
+      if (actualWidth >= calcWidth) {
+          clearInterval(interval);
+          callback(reqElem);
+          return;
+        }
+        // рисует состояние анимации
+      draw(actualWidth+100);
+
+      }, 1000/fps);
+
+      function draw(actWidth) {
+        reqElem.style.width = actWidth + 'px';
+      }
+    }
+
+
    //Устанавливаем высоту элемента при первичной загрузке странице
    const accordeonActiveItem = document.querySelector('.accordeon__item_active');
    const accordeonActiveElem = accordeonActiveItem.querySelector('.accordeon__elem');
@@ -38,8 +63,17 @@ var accordeon = function(){
         if ((!reqItem.classList.contains('accordeon-menu__item_active'))&&(reqItem.classList.contains('accordeon-menu__item'))){
           activeElem.style.width = '0px';
           activeItem.classList.remove('accordeon-menu__item_active');
-          reqElem.style.width = calculateWidth() + 'px';
+          activeElem.querySelector('.accordeon-menu__desc-text').style.opacity = 0;
           reqItem.classList.add('accordeon-menu__item_active');
+
+          function callback(reqElem){
+            const reqText = reqElem.querySelector('.accordeon-menu__desc-text');
+            reqText.style.opacity = 1;
+            console.log('reqText.style.opacity');
+          }
+
+          animateWidth(reqElem, callback);
+          
         };
       }
     })
