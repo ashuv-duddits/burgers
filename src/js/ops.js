@@ -57,7 +57,7 @@ if (md.mobile()){
     var height = parseInt(computed.height)/sectionsAmount;
     let currentTop = parseInt(computed.top);
 
-    if ((currentTop%height==0)||(currentTop==0)){
+    if ((currentTop%height<=1)||(currentTop==0)){
       maincontent.style.top = -reqIndex*height + 'px';
       maincontent.children[activeIndex].classList.remove('section-active');
       maincontent.children[reqIndex].classList.add('section-active');
