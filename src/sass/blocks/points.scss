@@ -1,0 +1,43 @@
+.points{
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  @include laptop {
+    right: -9999px;
+  }
+  z-index: 2;
+}
+
+.points__list{
+  display: flex;
+  flex-direction: column;
+}
+
+.points__item{
+  margin-bottom: 5px;
+  &:hover, &.points__item-active{
+    .points__link{
+      border-color: #fff;
+    }
+  }
+}
+
+.points__link{
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

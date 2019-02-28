@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <section class="section head" style="background-image:url('img/backgrounds/bg.jpg')">
+      <section id="head" class="section head section-active" style="background-image:url('img/backgrounds/bg.jpg')">
         <div class="container container-head">
           <header class="header">
             <div class="logo">
@@ -23,17 +23,17 @@
             <div class="head__buttons">
               <nav class="nav">
                 <ul class="nav__list">
-                  <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                  <li class="nav__item"><a href="#best" class="nav__link">О нас</a></li>
+                  <li class="nav__item"><a href="#slider" class="nav__link">Бургеры</a></li>
+                  <li class="nav__item"><a href="#team" class="nav__link">Команда</a></li>
+                  <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                  <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                  <li class="nav__item"><a href="#player" class="nav__link">Как мы работаем</a></li>
+                  <li class="nav__item"><a href="#maps" class="nav__link">Контакты</a></li>
                 </ul>
               </nav>
               <div class="head__btns">
-                <a href="#" class="button">Заказать</a>
+                <a href="#order" class="button button-order">Заказать</a>
                 <a href="#" class="hamburger-menu-link">
                   <span class="hamburger-menu-link__item"></span>
                   <span class="hamburger-menu-link__item"></span>
@@ -46,13 +46,13 @@
                     </svg>
                   </div>
                   <ul class="hamburger-menu__list">
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">О нас</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Бургеры</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Команда</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Меню</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Отзывы</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Как мы работаем</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Контакты</a></li>
+                    <li class="hamburger-menu__item"><a href="#best" class="hamburger-menu__link">О нас</a></li>
+                    <li class="hamburger-menu__item"><a href="#slider" class="hamburger-menu__link">Бургеры</a></li>
+                    <li class="hamburger-menu__item"><a href="#team" class="hamburger-menu__link">Команда</a></li>
+                    <li class="hamburger-menu__item"><a href="#menu" class="hamburger-menu__link">Меню</a></li>
+                    <li class="hamburger-menu__item"><a href="#reviews" class="hamburger-menu__link">Отзывы</a></li>
+                    <li class="hamburger-menu__item"><a href="#player" class="hamburger-menu__link">Как мы работаем</a></li>
+                    <li class="hamburger-menu__item"><a href="#maps" class="hamburger-menu__link">Контакты</a></li>
                   </ul>
                 </div>
               </div>
@@ -74,7 +74,7 @@
           </a>
         </div>
       </section>
-      <section class="section best" style="background-image:url('img/backgrounds/bg_best.jpg')">
+      <section id="best" class="section best" style="background-image:url('img/backgrounds/bg_best.jpg')">
         <div class="container container-center">
           <h2 class="section-title section-title_black">Мы лучшие</h2>
           <ul class="best__list">
@@ -128,7 +128,7 @@
           </ul>
         </div>
       </section>
-      <section class="section slider">
+      <section id="slider" class="section slider">
         <div class="container container-center container-slider">
           <button class="slider__scroll-left" type="button">
             <svg class="arrow-scroll-icon">
@@ -636,7 +636,7 @@
           </button>
         </div>
       </section>
-      <section class="section team" style="background-image:url('img/backgrounds/bg_team.jpg')">
+      <section id="team" class="section team" style="background-image:url('img/backgrounds/bg_team.jpg')">
         <div class="team__wrap">
           <div class="team__content">
             <h2 class="section-title section-title_team">Команда</h2>
@@ -693,7 +693,7 @@
           </div>
         </div>
       </section>
-      <section class="section menu" style="background-image:url('img/backgrounds/bg_menu.jpg')">
+      <section id="menu" class="section menu" style="background-image:url('img/backgrounds/bg_menu.jpg')">
         <h2 class="section-title section-title_white section-title_menu">Меню</h2>
         <ul class="accordeon-menu">
           <li class="accordeon-menu__item accordeon-menu__item_active">
@@ -701,9 +701,11 @@
               <span class="accordeon-menu__text">Для мясоедов</span>
             </a>
             <div class="accordeon-menu__desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
-              Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
-              rem debitis.
+              <div class="accordeon-menu__desc-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
+                  Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
+                  rem debitis.
+              </div>
             </div>
           </li>
           <li class="accordeon-menu__item">
@@ -711,24 +713,28 @@
               <span class="accordeon-menu__text">Вегетарианское</span>
             </a>
             <div class="accordeon-menu__desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
-              Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
-              rem debitis.
-            </div>
+                <div class="accordeon-menu__desc-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
+                    Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
+                    rem debitis.
+                </div>
+              </div>
           </li>
           <li class="accordeon-menu__item">
             <a href="#" class="accordeon-menu__link" style="background-image:url('img/backgrounds/bg_menu_elem-3.jpg')">
               <span class="accordeon-menu__text">Диетическое</span>
             </a>
             <div class="accordeon-menu__desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
-              Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
-              rem debitis.
-            </div>
+                <div class="accordeon-menu__desc-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, nobis quisquam. Quas, recusandae numquam?
+                    Quod veritatis esse qui ullam, totam animi modi nesciunt distinctio obcaecati accusamus. Doloribus odit
+                    rem debitis.
+                </div>
+              </div>
           </li>
         </ul>
       </section>
-      <section class="section reviews">
+      <section id="reviews" class="section reviews">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url('./img/reviews/Background1.jpg')">
             <div class="reviews__wrap">
@@ -836,7 +842,44 @@
           </li>
         </ul>
       </section>
-      <section class="section order" style="background-image:url('img/backgrounds/bg_order.jpg')">
+      <section id="player" class="section player" style="background-image:url('img/backgrounds/bg_player.jpg')">
+        <h2 class="section-title section-title_black">Как мы работаем</h2>
+        <div class="player__wrap">
+          <div class="player__play player__play-img player__play-bg">
+            <video class="player__video" src="./video/loftschool.mp4"></video>
+            <div class="player__play-icon">
+              <a href="#" class="player__play-link">
+                <svg class="play-icon">
+                  <use xlink:href="./img/sprite.svg#play"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="player__controls">
+              <div class="player__toolbar">
+                <a href="#" class="player__toolbar-icon">
+                  <svg class="play-icon" >
+                    <use xlink:href="./img/sprite.svg#play"></use>
+                  </svg>
+                </a>
+                <div class="player__toolbar-range">
+                  <div class="player__toolbar-range-circle"></div>
+                </div>
+              </div>
+              <div class="player__volume">
+                <a  href="#" class="player__volume-icon">
+                  <svg class="volume-icon" >
+                    <use xlink:href="./img/sprite.svg#volume"></use>
+                  </svg>
+                </a>
+                <div class="player__volume-range">
+                  <div class="player__volume-range-circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="order" class="section order" style="background-image:url('img/backgrounds/bg_order.jpg')">
         <div class="container container-order">
           <h2 class="section-title section-title_order">Закажите доставку</h2>
           <div class="form-wrap">
@@ -912,7 +955,13 @@
           </div>
         </div>
       </section>
-      <section class="section map" style="background-image:url('img/backgrounds/map.jpg')">
+      <section id="maps" class="section map" style="background-image:url('img/backgrounds/map.jpg')">
+        <div id="map" class="maps"></div>
+        <!-- <div class="map__icon">
+          <svg class="map-marker-icon">
+            <use xlink:href="./img/sprite.svg#map-marker"></use>
+          </svg>
+        </div> -->
         <footer class="footer" style="background-image:url('img/backgrounds/bg_foot.jpg')">
           <div class="container container-footer">
             <div class="footer__column footer__column_left">
@@ -965,19 +1014,22 @@
   </div>
   <nav class="points">
     <ul class="points__list">
-      <li class="points__item points__item-active"><a href="#" class="points__link"></a></li>
+      <!-- <li class="points__item points__item-active"><a href="#" class="points__link"></a></li>
       <li class="points__item"><a href="#" class="points__link"></a></li>
       <li class="points__item"><a href="#" class="points__link"></a></li>
       <li class="points__item"><a href="#" class="points__link"></a></li>
       <li class="points__item"><a href="#" class="points__link"></a></li>
       <li class="points__item"><a href="#" class="points__link"></a></li>
-      <li class="points__item"><a href="#" class="points__link"></a></li>
+      <li class="points__item"><a href="#" class="points__link"></a></li> -->
     </ul>
   </nav>
   <div class="modal" id="modal"></div>
   <div class="modal" id="modalForm"></div>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+  <!-- <script src="js/libs.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8a459371-8c61-4bd6-b766-7a0d75576d00&lang=ru_RU" type="text/javascript"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
